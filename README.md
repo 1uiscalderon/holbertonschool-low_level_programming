@@ -1,1 +1,1 @@
-Project with task to learn C
+Task for debugging learning

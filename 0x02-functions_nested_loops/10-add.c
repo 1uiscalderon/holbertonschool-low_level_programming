@@ -1,14 +1,15 @@
 #include "holberton.h"
 
 /**
- * _isalpha - returns 1 if a letter is lower or upper case
- *@c: is a parameter
- * Return: 1 if c is lowercase, 0 if it isnt
+ * add - function that add two integers
+ *@a: is a parameter
+ *@b: is a parameter
+ * Return: sum
  */
-int add(int, int)
+int add(int a, int b)
 {
 	int sum;
 
 	sum = a + b;
-	return (c);
+	return (sum);
 }

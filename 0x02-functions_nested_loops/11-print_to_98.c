@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * _isalpha - returns 1 if a letter is lower or upper case
+ * print_to_98 - prints all natural numbers from n to 98
  *@n: is a parameter
- * Return: 1 if c is lowercase, 0 if it isnt
+ *
  */
 void print_to_98(int n)
 {

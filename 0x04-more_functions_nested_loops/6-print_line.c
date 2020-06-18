@@ -2,7 +2,7 @@
 
 /**
  * print_line - prints a line in the terminal
- *
+ *@n: is a parameter
  */
 void print_line(int n)
 {

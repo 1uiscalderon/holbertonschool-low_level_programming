@@ -5,7 +5,7 @@
  *@c: is a parameter
  * Return: 1 if c is lowercase, 0 if it isnt
  */
-int _isupper(int c);
+int _isupper(int c)
 {
-	return (c >= 'A' && c <= 'Z')
+	return (c >= 'A' && c <= 'Z');
 }

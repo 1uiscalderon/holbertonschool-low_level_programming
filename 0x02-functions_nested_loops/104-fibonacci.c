@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - compute and prints the sum of all the multiples of 3 or 5 below 1024
+ * main - finds and prints the first 98 Fibonacci numbers
  * Return: 0 is success
  */
 int main(void)
@@ -14,11 +14,11 @@ int main(void)
 
 	printf("%lu", i);
 
-	for (n = 0; n < 91; n++)
+	for (n = 1; n < 91; n++)
 	{
 		printf(", %ld", j);
 		j = j + i;
-		i = j - 1;
+		i = j - i;
 	}
 
 	i1 = i / 1000000000;
@@ -26,10 +26,10 @@ int main(void)
 	j1 = j / 1000000000;
 	j2 = j % 1000000000;
 
-	for (n = 92; n < 99; ++n)
+	for (n = 92; n < 99; n++)
 	{
 		printf(", %lu", j1 + (j2 / 1000000000));
-		printf("%lu, ", j2 % 1000000000);
+		printf("%lu", j2 % 1000000000);
 		j1 = j1 + i1;
 		i1 = j1 - i1;
 		j2 = j2 + i2;

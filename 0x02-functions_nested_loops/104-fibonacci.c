@@ -16,7 +16,7 @@ int main(void)
 
 	for (n = 0; n < 91; n++)
 	{
-		printf(, "%ld", j);
+		printf(", %ld", j);
 		j = j + i;
 		i = j - 1;
 	}

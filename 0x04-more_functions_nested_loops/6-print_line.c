@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_alphabet - prints the alphabet using putchar
- * Return: 0 if success
+ * print_line - prints a line in the terminal
+ *
  */
 void print_line(int n)
 {

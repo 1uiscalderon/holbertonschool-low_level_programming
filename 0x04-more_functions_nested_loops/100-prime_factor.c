@@ -9,7 +9,7 @@ int main(void)
 	long int n = 612852475143;
 	int pfn = 2;
 
-	while ( n != 1)
+	while (n != 1)
 	{
 		if (n % pfn == 0)
 		{

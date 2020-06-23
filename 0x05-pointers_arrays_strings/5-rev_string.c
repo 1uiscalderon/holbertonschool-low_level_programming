@@ -13,6 +13,7 @@ void print_rev(char *s)
 	{
 	}
 	c = i - 1;
+	i = i - 1;
 	for (j = 0; j <= c; j++)
 	{
 		r = s[j];

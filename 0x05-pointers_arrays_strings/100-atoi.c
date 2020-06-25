@@ -6,21 +6,25 @@
  */
 int _atoi(char *s)
 {
-	int i, res, num, signo = 1;
+	int i;
+	int res = 0;
+	int digit;
+	int signo = 1;
+	int flag = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == '-')
 		{
-			signo = -signo;
+			signo = signo * -1;
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			num = s[i];
-			num = num - '0';
-			res = res + (num * 10);
+		        digit = s[i] - 48;
+			res = res * 10 + digit;
+			flag = 1;
 		}
-		else
+		else if (flag == 1)
 		{
 			break;
 		}

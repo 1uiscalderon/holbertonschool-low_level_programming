@@ -21,7 +21,7 @@ int _atoi(char *s)
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			digit = s[i] - 48;
+			digit = s[i] - '0';
 			res = res * 10 + digit;
 			flag = 1;
 		}

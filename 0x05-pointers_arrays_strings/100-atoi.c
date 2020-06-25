@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- *_atoi - Converts a string to an integer
+ * _atoi - Converts a string to an integer
  *@s: is a parameter
+ * Return: integer
  */
 int _atoi(char *s)
 {
@@ -20,7 +21,7 @@ int _atoi(char *s)
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-		        digit = s[i] - 48;
+			digit = s[i] - 48;
 			res = res * 10 + digit;
 			flag = 1;
 		}

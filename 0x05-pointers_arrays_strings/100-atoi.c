@@ -26,5 +26,5 @@ int _atoi(char *s)
 		}
 	}
 	res = res * signo;
-	return(res)
+	return (res);
 }

@@ -1,35 +1,26 @@
 #include "holberton.h"
 
 /**
- * print_number - Converts a string to an integer
- *@n: is a parameter
- *
+ * print_number - function that prints an integer
+ *@n: parameter
  */
 void print_number(int n)
 {
-	int i;
-	unsigned int res = 0;
-	int digit;
-	int signo = 1;
-	int flag = 0;
 
-	for (i = 0; n[i] != '\0'; i++)
+	unsigned int a = 0;
+
+	if (n < 0)
 	{
-		if (n[i] == '-')
-		{
-			signo = signo * -1;
-		}
-		if (n[i] >= '0' && n[i] <= '9')
-		{
-			digit = n[i] - '0';
-			res = res * 10 + digit;
-			flag = 1;
-		}
-		else if (flag == 1)
-		{
-			break;
-		}
+		a = -n;
+		_putchar('-');
 	}
-	res = res * signo;
-
+	else
+	{
+		a = n;
+	}
+	if (a >= 10)
+	{
+		print_number(a / 10);
+	}
+	_putchar((a % 10) + '0');
 }

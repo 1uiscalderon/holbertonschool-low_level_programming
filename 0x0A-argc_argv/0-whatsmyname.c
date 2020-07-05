@@ -3,6 +3,7 @@
  * main - Prints the programs name
  * @argc: Number of arguments in program
  * @argv: Argument vectors
+ *Return: 0 is success
  */
 int main(int argc, char *argv[])
 {

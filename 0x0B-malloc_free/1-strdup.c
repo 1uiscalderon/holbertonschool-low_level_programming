@@ -7,7 +7,7 @@
  */
 char *_strdup(char *str)
 {
-	int i, len;
+	unsigned int i, len;
 	char *dest;
 
 	if (str == 0)
@@ -28,5 +28,4 @@ char *_strdup(char *str)
 		dest[i] = str[i];
 	}
 	return (dest);
-	free (dest);
 }

@@ -2,9 +2,9 @@
 #include <stdlib.h>
 /**
  * array_range - Creates an array of integers
- * @nmemb: width of matrix
- * @size: height of matrix
- *Return: Pointer of the allocated memory
+ * @min: min value of the pointer
+ * @max: max value of the pointer
+ *Return: Pointer of integers
  */
 int *array_range(int min, int max)
 {
@@ -21,5 +21,5 @@ int *array_range(int min, int max)
 			for (i = 0; min <= max; i++, min++)
 				p[i] = min;
 
-	return(p);
+	return (p);
 }

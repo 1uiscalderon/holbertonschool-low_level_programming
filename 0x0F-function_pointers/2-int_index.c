@@ -6,20 +6,12 @@
  * @array: Array of elements
  * @size: Size of the array
  * @cmp: Pointer to function
+ *Return: -1 if no element matches or if size <=0
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	if (array == NULL || cmp == NULL)
-	{
-		return (0);
-	}
-
-	if (size <= 0)
-	{
-		return (-1);
-	}
 	if (array && cmp)
 	{
 		for (i = 0; i < size; i++)

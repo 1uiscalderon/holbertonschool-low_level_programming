@@ -7,8 +7,8 @@
 
 void print_all(const char *const format, ...)
 {
-	unsigned int i = 0;
-	char *string, flag = 0;
+	int i = 0, flag = 0;
+	char *string;
 	va_list argum;
 
 	va_start(argum, format);

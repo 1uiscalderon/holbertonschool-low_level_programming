@@ -8,8 +8,7 @@
 void print_all(const char *const format, ...)
 {
 	unsigned int i = 0;
-	char *string, *sep = "";
-
+	char *string, flag = 0;
 	va_list argum;
 
 	va_start(argum, format);
@@ -19,25 +18,34 @@ void print_all(const char *const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-			printf("%s%c", sep, va_arg(argum, int));
+			printf("%c", va_arg(argum, int));
+			flag = 1;
 			break;
 		case 'i':
-			printf("%s%d", sep, va_arg(argum, int));
+			printf("%d", va_arg(argum, int));
+			flag = 1;
 			break;
 		case 'f':
-			printf("%s%f", sep, va_arg(argum, double));
+			printf("%f", va_arg(argum, double));
+			flag = 1;
 			break;
 		case 's':
 			string = va_arg(argum, char *);
 			if (string == NULL)
+			{
 				printf("(nil)");
-			printf("%s%s", sep, string);
+				flag = 1;
+				break;
+			}
+			printf("%s", string);
+			flag = 1;
 			break;
 		default:
-			i++;
-			continue;
+			flag = 0;
+			break;
 		}
-		sep = ", ";
+		if (flag == 1 && format[i + 1] != '\0')
+			printf(", ");
 		i++;
 	}
 

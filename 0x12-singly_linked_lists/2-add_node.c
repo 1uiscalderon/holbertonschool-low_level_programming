@@ -5,7 +5,7 @@
  *@s: is a parameter
  *Return: The length "i"
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int i;
 
@@ -21,7 +21,7 @@ int _strlen(char *s)
  * Return: Node added
  */
 
-list_t *add_node(list_t **head, const char *str);
+list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
 

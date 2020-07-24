@@ -15,7 +15,7 @@ int _strlen(const char *s)
 }
 
 /**
- * add_node - Adds a new node at the beginning of a list_t list
+ * add_node_end - Adds a new node at the beginning of a list_t list
  * @head: Pointer to the linked list
  * @str: String in the new node
  * Return: Node added

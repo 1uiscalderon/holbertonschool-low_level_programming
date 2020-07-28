@@ -1,4 +1,4 @@
-include "lists.h"
+#include "lists.h"
 /**
  * free_listint2 - Frees the list.
  * @head: First pointer to the linked list
@@ -9,7 +9,7 @@ void free_listint2(listint_t **head)
 	listint_t *tmp;
 
 	if (*head == NULL)
-		return (0);
+		return;
 
 	while (*head)
 	{

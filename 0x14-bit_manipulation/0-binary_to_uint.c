@@ -3,6 +3,7 @@
 /**
  * binary_to_uint - Converts a binary number to an unsigned int.
  * @b: String with number to convert
+ * Return: Decimal
  */
 
 unsigned int binary_to_uint(const char *b)

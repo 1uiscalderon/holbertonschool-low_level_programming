@@ -9,11 +9,6 @@ void print_binary(unsigned long int n)
 	int i, cont = 0;
 	unsigned long int num;
 
-	i = n;
-
-	if (i < 0)
-		n = 0;
-
 	for (i = 31; i >= 0; i--) /*32 bits tamaño de un unsigned long int*/
 	{
 		num = n >> i;

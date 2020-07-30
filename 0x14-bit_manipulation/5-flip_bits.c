@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_binary - Converts a number to binary
+ * flip_bits - returns the number of bits needed to get the other number.
  * @n: First Number
  * @m: Second Number
  * Return: Number of bits to be changed

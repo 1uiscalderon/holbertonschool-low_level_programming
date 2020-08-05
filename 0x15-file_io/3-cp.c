@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 
 	if (argc != 3)
-		dprinf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	file_o = open(argv[1], O_RDONLY);
 	if (file_o == -1)
 	{
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while (r = read(file_o, buffer, 1024) > 0)
+	while ((r = read(file_o, buffer, 1024)) > 0)
 	{
 		w = write(file_d, buffer, r);
 	}

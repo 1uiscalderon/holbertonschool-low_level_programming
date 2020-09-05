@@ -6,7 +6,7 @@
 * Return: Number inside of nodes in the list
 */
 
-size_t print_listint(const listint_t *h)
+size_t print_dlistint(const dlistint_t *h)
 {
 	int i;
 

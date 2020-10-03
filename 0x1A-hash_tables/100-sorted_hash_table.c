@@ -25,7 +25,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * hash_table_set - Adds a new element to the hast table
+ * shash_table_set - Adds a new element to the hast table
  * @ht: Pointer to the hash table
  * @key: Key to evaluate in the hash table, if it is
  * taken adds it.
@@ -90,7 +90,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 }
 
 /**
- * hash_table_print - Prints a hash table
+ * shash_table_print - Prints a hash table
  * @ht: Pointer to the hash table
  */
 void shash_table_print(const shash_table_t *ht)
@@ -118,6 +118,10 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 
+/**
+ * shash_table_print_rev - Prints a hash table backwards
+ * @ht: Pointer to the hash table
+ */
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *new_n = NULL;
@@ -139,7 +143,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("}\n");
 }
 /**
- * hash_table_delete - Deletes a hash table
+ * shash_table_delete - Deletes a hash table
  * @ht: Pointer to the hash table
  */
 void shash_table_delete(shash_table_t *ht)
@@ -165,30 +169,36 @@ void shash_table_delete(shash_table_t *ht)
 	free(ht);
 }
 
-void sortnode(shash_node_t **head, shash_node_t ** tail, shash_node_t *new)
+/**
+ * sortnode - Sorts de nodes using doublylinked list
+ * @head: Pointer to the hash table head
+ * @tail: Pointer to the hash table tail
+ * @new: Node to be sorted
+ */
+void sortnode(shash_node_t **head, shash_node_t **tail, shash_node_t *new)
 {
-    if (*head == NULL || strcmp(new->key, (*head)->key) < 0)
-    {
-        new->snext = *head;
-        new->sprev = NULL;
-        if (*head)
-            (*head)->sprev = new;
-        else
-            *tail = new;
-        *head = new;
-    }
-    else
-    {
-        new->snext = *head;
-        while (new->snext && new->snext->snext
-        && strcmp(new->key, new->snext->snext->key) > 0)
-            new->snext = new->snext->snext;
-        new->sprev = new->snext;
-                if (new->snext->snext)
-                        new->snext->snext->sprev = new;
-        else
-            *tail = new;
-                new->snext = new->snext->snext;
-                new->sprev->snext = new;
-    }
+	if (*head == NULL || strcmp(new->key, (*head)->key) < 0)
+	{
+		new->snext = *head;
+		new->sprev = NULL;
+		if (*head)
+			(*head)->sprev = new;
+		else
+			*tail = new;
+		*head = new;
+	}
+	else
+	{
+		new->snext = *head;
+		while (new->snext && new->snext->snext &&
+				strcmp(new->key, new->snext->snext->key) > 0)
+			new->snext = new->snext->snext;
+		new->sprev = new->snext;
+		if (new->snext->snext)
+			new->snext->snext->sprev = new;
+		else
+			*tail = new;
+		new->snext = new->snext->snext;
+		new->sprev->snext = new;
+	}
 }
